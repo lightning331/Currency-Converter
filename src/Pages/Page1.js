@@ -108,8 +108,8 @@ export const Page1 = () => {
                         styles={customStyles}
                         defaultValue={selectedOption2}
                         onChange={(e) => { 
-                            const rate = 1 / state.rates.rates[e.value]
-                            setAmount1((amount2 * rate).toFixed(4))
+                            const rate = state.rates.rates[e.value]
+                            setAmount2((amount1 * rate).toFixed(4))
                             setSelectedOption2(e)}
                         }
                         options={currencyList}
@@ -129,7 +129,6 @@ export const Page1 = () => {
             </div>
         )
     }
-    console.log("state value", state)
     if (!loading) {
         //set default currency
         const option1 = currencyList.find(e => {return e.value === state.base})
