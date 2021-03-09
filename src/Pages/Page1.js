@@ -85,7 +85,7 @@ export const Page1 = () => {
                     <p style={{marginTop: 32}}>Enter amount</p>    
                     <div className="input-amount">
                         <input type="number" value={amount1} 
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        onChange={(e) => {
                                 setAmount1(e.target.value)
                                 setAmount2((e.target.value * rate1vs2).toFixed(4))
                             }
@@ -117,7 +117,7 @@ export const Page1 = () => {
                     <p style={{marginTop: 32}}>Enter amount</p>    
                     <div className="input-amount">
                         <input type="number" value={amount2} 
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                        onChange={(e) => {
                                 setAmount2(e.target.value)
                                 setAmount1((e.target.value * Number(rate2vs1)).toFixed(4))
                             }
@@ -129,7 +129,7 @@ export const Page1 = () => {
             </div>
         )
     }
-
+    console.log("state value", state)
     if (!loading) {
         //set default currency
         const option1 = currencyList.find(e => {return e.value === state.base})
