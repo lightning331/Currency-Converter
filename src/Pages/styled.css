@@ -1,9 +1,5 @@
 .header {
-    /* text-align: center; */
     background-color: #2B439C;
-    /* height: 62px;
-    align-items: center;
-    display: flex; */
   }
   .header ul {
     flex-direction: row;
@@ -13,13 +9,15 @@
     list-style-type: none;
   }
   .header li {
-    color: white;
     font-weight: 900;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 48px;
     padding-right: 48px;
-    background-color: #15255E;
+  }
+  .header a {
+    text-decoration: none;
+    color: white;
   }
   .tabmenu {
     padding-left: 16%;
@@ -27,7 +25,8 @@
 
   .body {
     margin-top: 83px;
-    padding-left: 16%;
+    margin-left: 16%;
+    max-width: 919px;
   }
   .body p {
     margin: 0;
@@ -47,10 +46,10 @@
   .main {
     flex-direction: row;
     display: flex;
+    justify-content: space-between;
   }
 
   .form {
-    min-width: 436px;
     margin-top: 62px;
     background: #F0F1F4;
     border-radius: 10px;
@@ -67,8 +66,8 @@
     margin-bottom: 13px;
   }
 
-  .secondform {
-    margin-left: 49px;
+  .card {
+    width: 436px;
   }
 
   .input-amount {
@@ -112,4 +111,37 @@
     font-weight: 300;
     font-size: 18px;
     color: #333333;
+  }
+
+  .list_header {
+    display: flex;
+    background: #F0F1F4;
+    padding-left: 20px;
+    border-radius: 6px;
+  }
+  .list_header p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+    line-height: 300%;
+  }
+
+  .list_body {
+    padding-left: 20px;
+  }
+  .list_cell {
+    display: flex;
+  }
+  .list_cell p {
+    font-weight: 300;
+    font-size: 18px;
+    color: #333333;
+    line-height: 240%;
+  }
+
+  .table_rates {
+    margin-top: 39px;
+    margin-bottom: 39px;
+    border-radius: 6px;
+    border: 1px solid #BFBFBF;
   }

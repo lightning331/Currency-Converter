@@ -3,10 +3,11 @@ import Reducer from "./Reducer"
 
 
 const initialState = {
-    symbols: null,
-    symbol_error: null,
-    rates: null,
-    rate_error: null,
+    symbols: null, //all currency list including the symbols
+    symbol_error: null, //error when receiving the "symbols"
+    base: "USD", //defaulf base value of currency is "USD"
+    rates: null,  //currency exchange rate list based on "base"
+    rate_error: null, //error when receiving the "rates"
 };
 
 const Store = ({children}) => {

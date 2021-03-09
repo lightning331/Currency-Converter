@@ -12,6 +12,11 @@ const Reducer = (state, action) => {
                 ...state,
                 symbol_error: action.payload
             };
+        case types.CHANGE_BASE:
+            return {
+                ...state,
+                base: action.payload
+            };
         case types.CURRENCY_RATES_SUCCESS:
             return {
                 ...state,
